@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Площадь трапеции</title>
+
+<!--  2. Подсчет площади трапеции.
+Пользователь вводит длину оснований трапеции (a и b), а также высоту трапеции h.
+Программа выводит сообщение:
+  «Площадь трапеции будет равна <значение>».
+    Площадь вычисляется по формуле ((a + b) / 2) * h, где a, b - основания, h - высота.-->
+</head>
+<body>
+
+<script>
+  //запрашиваем основания трапеции
+    var base_trapezoid_a = prompt("Введите первое основание трапеции : ");
+    var base_trapezoid_b = prompt("Введите второе основание трапеции : ");
+
+//запрашиваем высоту трапеции
+    var height_trapezoid = prompt("Введите высоту трапеции: ");
+
+// переводим из строкового в числовой тип
+    base_trapezoid_a = parseInt(base_trapezoid_a);
+    base_trapezoid_b = parseInt(base_trapezoid_b);
+    height_trapezoid = parseInt(height_trapezoid);
+
+//вычисляем площадь трапеции
+    var trapezoid_area = ((base_trapezoid_a + base_trapezoid_b) / 2) * height_trapezoid;
+
+//выводим на на экран площадь трапеции
+    alert("Площадь трапеции составляет: " + trapezoid_area );
+</script>
+
+</body>
+</html>
