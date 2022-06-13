@@ -1,0 +1,25 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	/*
+2. Банковская программа.
+Пользователь вводит сумму вклада и процент, который будет начисляться ежегодно. 
+Отобразить размер вклада поочередно на ближайшие 5 лет.
+	*/
+
+	//приветствие
+	alert("Банковская программа.")
+
+	//суммa вклада
+	var deposit_amount = +prompt("Введите сумму которую Вы хотите положить на вклад: ")
+
+	//процент вклада
+	var deposit_percentage = +prompt("Введите процент по вкладу: ")
+
+	//срок вклада
+	//var deposit_term = 5
+
+	for (var deposit_term = 1; deposit_term <= 5; deposit_term++) {
+		document.write("На " + deposit_term + " год. Сумма вклада составит: " + (deposit_amount += parseInt(deposit_amount * deposit_percentage) / 100) + " рублей <br/>");
+	}
+
+</script>

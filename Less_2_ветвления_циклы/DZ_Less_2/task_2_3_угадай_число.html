@@ -1,0 +1,45 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+	/*
+3. Дописать игру “Угадай число” (по желанию).
+Сделать игру с двумя игроками и бесконечным числом попыток. Сделайте возможность выйти из игры по желанию одного из игроков.
+	*/
+	//приветствие
+	alert("Игра - Угадай число.\nИграют два игрока.\nЕсли захотите выйти нажмите 'Q'")
+	// программа рандомно загадывает число от 0 до 100
+	var answer = parseInt(Math.random() * 100);
+
+	//создаем игрока
+	var player_number = 1;	
+
+	
+	//для бесконечного числа попыток используе цикл while
+	while(true){
+		// запрос ответа игрока
+		var user_answer = prompt("Угадайте число от 0 до 100.\nУгадывает игрок " + player_number + "\nДля выхода нажмите Q");
+
+		// выход из программы
+		if(user_answer == 'Q')
+			break;
+
+		// переводим ответ к числовому типу
+		user_answer = parseInt(user_answer)
+
+		if(user_answer == answer){
+			alert("Поздравляем! Угадал игрок № " + player_number);
+			break;
+		} else if(user_answer > answer){
+			alert("Вы ввели большое число.");
+		} else if(user_answer < answer){
+			alert("Вы ввели маленькое число.");
+		}
+
+		// меняем порядковый номер игрока
+		if(player_number == 1)
+			player_number = 2;
+	}
+
+	alert("Правильный ответ: " + answer);
+	
+</script>
