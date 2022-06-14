@@ -1,0 +1,61 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	//создаем пустой массив
+	var numbers = [];
+
+	/*
+
+	//добавить элемент в массив
+	numbers.push(42); // 42
+	numbers.push(18); // 42, 18
+	numbers.push(64); // 42, 18, 64
+
+	//убрать последний элемент из массива
+	numbers.pop()  // 42, 18
+
+	*/
+
+	//с помощью цикла заполним массив
+	for (var i = 0; i <= 5; i++) {
+		//генерируем случайное число
+		var random_number = parseInt(Math.random() * 100);
+
+		// добавляем это число в массив
+		numbers.push(random_number);
+	}
+
+	alert("Запомните числа и их порядок :" + numbers )
+
+	// запрашиваем число из массива
+	var user_answer = +prompt("Каким было первое число?");
+
+	if(user_answer == numbers[0]){
+		alert("Верно!");
+	} else {
+		alert("Не верно! Правильный ответ: " + numbers[0]);
+	}
+
+	// numbers.length -  длина нашего массива
+
+	user_answer = +prompt("Каким было последнее число?");
+
+	if(user_answer == numbers[ numbers.length - 1 ]){
+		alert("Верно!");
+	} else {
+		alert("Не верно! Правильный ответ: " + numbers[ numbers.length - 1 ]);
+	}
+
+
+	// генерируем случайное число порядкового номера чисел массива
+	var n = parseInt(Math.random() * numbers.length)
+
+	user_answer = +prompt("Каким было число под номером " + (n + 1) + "?");
+
+	if(user_answer == numbers[ n ]){
+		alert("Верно!");
+	} else {
+		alert("Не верно! Правильный ответ: " + numbers[ n ]);
+	}
+
+</script>

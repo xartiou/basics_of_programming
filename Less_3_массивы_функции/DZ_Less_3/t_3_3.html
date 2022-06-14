@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+/*3. Доработать игру в загадки:
+a. Избавиться в игре в загадки от дублирования кода, используя массивы и функции.
+b. Сделать так, чтобы программа поддерживала несколько правильных ответов на один и тот же вопрос.
+Все возможные варианты задаются программистом в коде программы.*/
+
+    //приветствие
+    alert("Начинаем игру в загадки!")
+
+    //максимальное число попыток
+    var max_try_count = 3
+
+    // кол-во правильных ответов
+    var correct_answer = 0
+
+    // ответ пользователя на Загадка № 1
+    var userAnswer1 = prompt("Загадка № 1.\n Музыкант, певец, рассказчик - а всего труба да ящик.");
+
+    //для перевода в нижний регистр ответа
+    userAnswer1 = userAnswer1.toLowerCase()
+
+    // ограничиваем количество попыток
+    for (var try_count = 1; try_count < max_try_count; try_count++) {
+        //сравниваем
+        if (userAnswer1 == 'граммафон'){
+            alert("Вы угадали!");
+            correct_answer += 1;
+            break;
+        } else {
+            alert("Вы не угадали.");
+        }
+
+        userAnswer1 = prompt("Попробуйте еще. Музыкант, певец, рассказчик - а всего труба да ящик.\n У Вас осталось " + (max_try_count - try_count) + " попыток.");
+    }
+
+    if (try_count == max_try_count)
+        alert("Вы не угадали.")
+        alert("Правильный ответ: граммафон");
+    
+    // ответ пользователя на Загадка № 2
+    var userAnswer2 = prompt("Загадка № 2.\n Речка спятила с ума- по домам сама пошла.");
+
+    //для перевода в нижний регистр ответа
+    userAnswer2 = userAnswer2.toLowerCase()
+
+    // ограничиваем количество попыток
+    for (var try_count = 1; try_count < max_try_count; try_count++) {
+        //сравниваем
+        if (userAnswer2 == 'водопровод'){
+            alert("Вы угадали!");
+            correct_answer += 1;
+            break;
+        } else {
+            alert("Вы не угадали.");
+        }
+
+        userAnswer2 = prompt("Попробуйте еще. Речка спятила с ума- по домам сама пошла.\n У Вас осталось " + (max_try_count - try_count) + " попыток.");
+    }
+
+    if (try_count == max_try_count)
+        alert("Вы не угадали.")
+        alert("Правильный ответ: водопровод");
+
+    // ответ пользователя на Загадка № 3
+    var userAnswer3 = prompt("Загадка № 3.\n Ах, не трогайте меня - обожгу и без огня.");
+
+    //для перевода в нижний регистр ответа
+    userAnswer3 = userAnswer3.toLowerCase()
+
+    // ограничиваем количество попыток
+    for (var try_count = 1; try_count < max_try_count; try_count++) {
+        //сравниваем
+        if (userAnswer3 == 'крапива'){
+            alert("Вы угадали!");
+            correct_answer += 1;
+            break;
+        } else {
+            alert("Вы не угадали.");
+        }
+
+        userAnswer3 = prompt("Попробуйте еще. Ах, не трогайте меня - обожгу и без огня.\n У Вас осталось " + (max_try_count - try_count) + " попыток.");
+    }
+
+    if (try_count == max_try_count)
+        alert("Вы не угадали.")
+        alert("Правильный ответ: крапива");
+
+    alert("Вы угадали " + correct_answer + " загадки.")
+
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	
+	/*
+	// обычный массив
+	var english_words = ["food", "bike", "apple", "do", "mean"];
+	var russian_words = ["еда", "велосипед", "яблоко", "делать", "иметь в виду"];
+
+	// обращение к элементу массива
+	alert(english_words[0]); // "food"
+	alert(russian_words[1]); // "велосипед"
+	*/
+
+	// многомерный массив
+	var words = [
+		["food", "еда"],
+		["bike", "велосипед"],
+		["apple", "яблоко"],
+		["do", "делать"],
+		["mean", "иметь в виду"],
+	];
+
+	/*
+	// обращение к элементу многомер. массива
+	alert(words[0]); // "food", "еда"
+	alert(words[0][1]); // "еда"
+	*/
+
+	//наша программа будет работать до тех пор пока пользователь не переведет все слова
+	while(words.length != 0){
+
+		// сгенерируем число элемента массива
+		var i = parseInt(Math.random() * words.length);
+	
+		//запрос пользователю
+		var user_translate = prompt("Как переводится слово: " + words[i][0]);
+	
+	
+		if(user_translate == words[i][1]){
+			alert("Правильно!");
+			// при правильном ответе удалеем это слово из массива
+			words.splice(i, 1)
+		} else {
+			alert("Не верно. Правильный перевод - " + words[i][1]);
+		}
+	}
+
+	alert("Вы перевели все слова.");
+
+</script>

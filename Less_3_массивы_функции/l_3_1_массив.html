@@ -1,0 +1,40 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	//создаем массив
+	var numbers = [42, 56, 96, 14, 28];
+
+	alert("Запомните числа и  их порядок: " + numbers);
+
+	// запрашиваем число из массива
+	var user_answer = +prompt("Каким было первое число?");
+
+	if(user_answer == numbers[0]){
+		alert("Верно!");
+	} else {
+		alert("Не верно! Правильный ответ: " + numbers[0]);
+	}
+
+	// numbers.length -  длина нашего массива
+
+	user_answer = +prompt("Каким было последнее число?");
+
+	if(user_answer == numbers[ numbers.length - 1 ]){
+		alert("Верно!");
+	} else {
+		alert("Не верно! Правильный ответ: " + numbers[ numbers.length - 1 ]);
+	}
+
+
+	// генерируем случайное число порядкового номера чисел массива
+	var n = parseInt(Math.random() * numbers.length)
+
+	user_answer = +prompt("Каким было число под номером " + (n + 1) + "?");
+
+	if(user_answer == numbers[ n ]){
+		alert("Верно!");
+	} else {
+		alert("Не верно! Правильный ответ: " + numbers[ n ]);
+	}
+
+</script>
